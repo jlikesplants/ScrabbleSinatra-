@@ -20,7 +20,7 @@ class MyApp < Sinatra::Base
 
   post '/score_many' do
     @page_title = "Score Lots of Words!"
-
+    @words = Scoring::Words.new(params["many_form"])
     erb :score_many
   end
 

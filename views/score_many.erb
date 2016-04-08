@@ -1,8 +1,7 @@
-<% if @word %>
-  <h1>
-    How many points is <%= @word.word %> worth?
-  </h1>
-  <p> <%= @word.word %> is worth <%= @word.score %> </p>
+<% if @words %>
+  <p><%= @words.score %></p>
+
+
 <% end %>
 
 <div class="params">
@@ -11,8 +10,9 @@
 
 <p>Enter words to score.</p>
 
-<form action="action_page.php">
-  <textarea name="words" rows="10" cols="30"></textarea>
-  <br>
+<form action="" method="post" accept-charset="utf-8" name="many_form">
+  <label for="many_form">Enter Words</label>
+  <textarea name="many_form" rows="10" cols="30"></textarea>
+
   <input type="submit" value="Score 'em!">
 </form>
