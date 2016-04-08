@@ -29,6 +29,6 @@ class MyApp < Sinatra::Base
     @word = Scoring::Word.new(params["word_to_score"]["word"])
     erb :score
   end
-  
+
   run!
 end

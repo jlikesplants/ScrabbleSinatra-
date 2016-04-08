@@ -2,10 +2,12 @@ module Scoring
 
 class Word
   attr_reader :word, :score
+
   def initialize(word)
-    @word = word
+    @word = Scoring.process_word(word)
     @score = Scoring.score(@word)
   end
+
 end
 
 class Scoring
@@ -40,6 +42,10 @@ class Scoring
 }
 
   # Take a word, upcase it, and return an array of its letters
+  def self.process_word(word)
+    word.gsub(/\W/,'')
+  end
+
   def self.word_letters(word)
      word.upcase.split(//)
   end
