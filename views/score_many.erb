@@ -1,7 +1,8 @@
+
 <% if @words %>
-  <p><%= @words.score %></p>
-
-
+    <% @words.score.each do |word| %>
+      <%= word %> <br>
+    <% end %>
 <% end %>
 
 <div class="params">

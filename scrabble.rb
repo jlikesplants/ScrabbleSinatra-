@@ -1,5 +1,7 @@
 require 'sinatra'
 require_relative 'lib/score_one'
+# kept getting an error message suggesting I add this require, so I did.
+require 'tilt/erb'
 
 class MyApp < Sinatra::Base
 

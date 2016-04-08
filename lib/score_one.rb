@@ -19,16 +19,14 @@ module Scoring
     def self.score(words)
       many = []
       array = words.split(' ')
+      index = 1
       array.each do |word|
         word = Scoring.process_word(word)
         score = Scoring.score(word)
-        many << "#{word}" + " is worth " + "#{score}" + " points."
-      end
-      index = 0
-      many.each do
-        puts many[index]
+        many << "#{word}".capitalize + " is worth " + "#{score}" + " points."
         index += 1
       end
+      many
     end
   end
 
@@ -68,7 +66,7 @@ module Scoring
     end
 
     def self.word_letters(word)
-      process_word(word)
+
       word.upcase.split(//)
     end
 
