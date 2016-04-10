@@ -11,25 +11,25 @@ class MyApp < Sinatra::Base
   end
 
   get '/score' do
-    @page_title = "Score a Word"
+    @page_title = "score a word"
+    erb :score
+  end
+
+  post '/score' do
+    @page_title = "score a word"
+    @word = Scoring::Word.new(params["word_to_score"]["word"])
     erb :score
   end
 
   get '/score_many' do
-    @page_title = "Score Lots of Words!"
+    @page_title = "score lots of words!"
     erb :score_many
   end
 
   post '/score_many' do
-    @page_title = "Score Lots of Words!"
+    @page_title = "score lots of words!"
     @words = Scoring::Words.new(params["many_form"])
     erb :score_many
-  end
-
-  post '/score' do
-    @page_title = "Score a Word"
-    @word = Scoring::Word.new(params["word_to_score"]["word"])
-    erb :score
   end
 
   run!

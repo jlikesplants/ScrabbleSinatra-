@@ -66,7 +66,6 @@ module Scoring
     end
 
     def self.word_letters(word)
-
       word.upcase.split(//)
     end
 

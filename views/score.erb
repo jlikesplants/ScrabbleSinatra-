@@ -1,17 +1,25 @@
-<% if @word %>
-  <h1>
-    How many points is <%= @word.word %> worth?
-  </h1>
-  <p> <%= @word.word %> is worth <%= @word.score %> </p>
-<% end %>
 
-<div class="params">
-  <%= params %>
-</div>
 
-<form action="" method="post" accept-charset="utf-8">
-  <label for="user_input">Word</label>
-  <input type="text" name="word_to_score[word]" value="" id="user_input">
+ <!-- <div class="params">
+   <%= params %>
+ </div> -->
 
-  <input type="submit" value="Score it!">
-</form>
+
+ <fieldset>
+   <legend>Enter a word:</legend>
+     <form action="" method="post" accept-charset="utf-8">
+       <label for="user_input"></label>
+       <input class="input_area" type="text" name="word_to_score[word]" value="" id="user_input">
+
+       <input class="button" type="submit" value="Score it!">
+     </form>
+ </fieldset>
+ 
+ <div class="result">
+   <% if @word %>
+   <h1>
+     How many points is <%= @word.word %> worth?
+   </h1>
+   <p> <%= @word.word %> is worth <%= @word.score %> </p>
+   <% end %>
+ </div>

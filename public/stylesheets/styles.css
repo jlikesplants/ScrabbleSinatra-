@@ -2,13 +2,34 @@
 box-sizing: border-box;
 }
 
-/** { margin:0; padding:0; }*/
-
 html {
   font-size: rem;
-  font-family: Verdana;
-  background-color: #f9f9f9;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #f9f9f9;
   width: 100%;
+  color: #400000;
+}
+
+@font-face {
+	font-family: 'Conv_DJB Letter Game Tiles';
+	src: url('fonts/DJB Letter Game Tiles.eot');
+	src: local('☺'), url('fonts/DJB Letter Game Tiles.woff') format('woff'), url('fonts/DJB Letter Game Tiles.ttf') format('truetype'), url('fonts/DJB Letter Game Tiles.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+header {
+  background: #D8B2B2;
+  height: auto;
+  margin: auto;
+  padding: 5%;
+}
+
+header h1 {
+  font-family: 'Conv_DJB Letter Game Tiles';
+  text-align: center;
+  font-size: 4rem;
+  font-weight: lighter;
 }
 
 nav {
@@ -26,19 +47,81 @@ nav ul {
 }
 
 nav li {
-  display: inline-block;
+  display: block;
   padding: .75rem; 10rem; .75rem; 10rem;
   float: left;
   margin-right: .1%;
-  border: solid #2c1913;
-  border-radius: .3rem;
+  border: solid #400000;
+  border-width: .175rem;
+  border-radius: .2rem;
   width: 33%;
   height: 3rem;
   text-align: center;
+  background-color: #e5cccc;
+  font-family: 'Montserrat', sans-serif;
 }
 
 nav a {
   display: block;
   text-decoration: none;
-  color: #4d201d;
+  color: #400000;
+}
+
+body {
+background-color: #e5c062;
+}
+
+fieldset {
+	display: block;
+	text-align: center;
+	margin: 5%;
+	border: none;
+	border: solid #400000;
+  border-width: .175rem;
+  border-radius: .2rem;
+	font-size: 2rem;
+}
+
+legend {
+	font-size: rem;
+}
+
+/*textarea {
+	display: inline-block;
+	width: 100%;
+	height: 30rem;
+}
+
+.input_area {
+  display: inline-block;
+  width: auto;
+  height: 30rem;
+}*/
+
+input.button {
+	display: block;
+	margin: auto;
+	  border-radius: .2rem;
+	  cursor: pointer;
+}
+
+.button:hover {
+  background-color:rgba(255,204,0,0.8);
+
+.result {
+  display: block;
+  text-align: center;
+  margin: 5%;
+  border: none;
+  border: solid #400000;
+  border-width: .175rem;
+  border-radius: .2rem;
+  font-size: 2rem;
+}
+
+footer {
+  clear: both;
+  font-size: .5rem;
+  padding: auto;
+  text-align: center;
 }

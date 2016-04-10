@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="css" href="stylesheets/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
     <header>
       <h1><%= @page_title %></h1>
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/score">Score a Word</a></li>
+          <li><a href="/score_many">Score Lots of Words!</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/score">Score a Word</a></li>
-        <li><a href="/score_many">Score Lots of Words!</a></li>
-      </ul>
-    </nav>
 
     <article>
       <%= yield %>
