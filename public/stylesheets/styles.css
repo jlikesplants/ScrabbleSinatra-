@@ -18,6 +18,10 @@ html {
 	font-style: normal;
 }
 
+body {
+  background-color: #e5c062;
+}
+
 header {
   background: #D8B2B2;
   height: auto;
@@ -67,61 +71,54 @@ nav a {
   color: #400000;
 }
 
-body {
-background-color: #e5c062;
+
+footer {
+  clear: both;
+  background-color: #f2e5e5;
+  font-size: .5rem;
+  padding: 1rem;
+  text-align: center;
 }
 
-fieldset {
-	display: block;
-	text-align: center;
-	margin: 5%;
-	border: none;
-	border: solid #400000;
-  border-width: .175rem;
-  border-radius: .2rem;
-	font-size: 2rem;
+.result {
+	display: inline-block;
+  float: right;
+  font-size: 2rem;
+  height: 50%
+  margin: auto;
+  text-align: center;
+  width: 45%;
+}
+
+.result .word{
+  font-family: 'Conv_DJB Letter Game Tiles';
+  font-size: 3rem;
+}
+
+.form {
+	display: inline-block;
+  float: left;
+  font-size: 2rem;
+  height: 50%;
+  margin: auto;
+  text-align: center;
+  width: 45%;
+}
+
+.form fieldset{
+  border: none;
+  width: 100%;
 }
 
 legend {
 	font-size: rem;
 }
 
-/*textarea {
-	display: inline-block;
-	width: 100%;
-	height: 30rem;
-}
-
-.input_area {
-  display: inline-block;
-  width: auto;
-  height: 30rem;
-}*/
-
 input.button {
-	display: block;
 	margin: auto;
-	  border-radius: .2rem;
-	  cursor: pointer;
+	border-radius: .2rem;
+	cursor: pointer;
 }
 
 .button:hover {
   background-color:rgba(255,204,0,0.8);
-
-.result {
-  display: block;
-  text-align: center;
-  margin: 5%;
-  border: none;
-  border: solid #400000;
-  border-width: .175rem;
-  border-radius: .2rem;
-  font-size: 2rem;
-}
-
-footer {
-  clear: both;
-  font-size: .5rem;
-  padding: auto;
-  text-align: center;
-}

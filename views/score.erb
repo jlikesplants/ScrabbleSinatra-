@@ -4,22 +4,20 @@
    <%= params %>
  </div> -->
 
+<div class="form">
+   <fieldset>
+     <legend>Enter a word:</legend>
+       <form action="" method="post" accept-charset="utf-8">
+         <label for="user_input"></label>
+         <input class="input_area" type="text" name="word_to_score[word]" value="" id="user_input">
 
- <fieldset>
-   <legend>Enter a word:</legend>
-     <form action="" method="post" accept-charset="utf-8">
-       <label for="user_input"></label>
-       <input class="input_area" type="text" name="word_to_score[word]" value="" id="user_input">
-
-       <input class="button" type="submit" value="Score it!">
-     </form>
- </fieldset>
- 
- <div class="result">
-   <% if @word %>
-   <h1>
-     How many points is <%= @word.word %> worth?
-   </h1>
-   <p> <%= @word.word %> is worth <%= @word.score %> </p>
-   <% end %>
+         <input class="button" type="submit" value="Score it!">
+       </form>
+   </fieldset>
  </div>
+
+ <article class="result">
+   <% if @word %>
+   <p> <span class="word"><%= @word.word %></span> is worth <%= @word.score %> points. </p>
+   <% end %>
+ </article>

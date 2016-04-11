@@ -1,18 +1,19 @@
+<div class="form">
+  <fieldset>
+      <legend>Enter words:</legend>
+        <form action="" method="post" accept-charset="utf-8" name="many_form">
+          <label for="many_form"></label>
+          <textarea name="many_form" rows="10" cols="30"></textarea>
 
-<fieldset>
-    <legend>Enter words:</legend>
-      <form action="" method="post" accept-charset="utf-8" name="many_form">
-        <label for="many_form"></label>
-        <textarea name="many_form" rows="10" cols="30"></textarea>
-
-        <input class="button" type="submit" value="Score 'em!">
-      </form>
-</fieldset>
+          <input class="button" type="submit" value="Score 'em!">
+        </form>
+  </fieldset>
+</div>
 
 <div class="result">
   <% if @words %>
     <% @words.score.each do |word| %>
-      <%= word %> <br>
+      <%= word %><br>
     <% end %>
   <% end %>
 </div>
